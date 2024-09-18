@@ -5,33 +5,30 @@
 </head>
 <body>
   <a-scene>
-    <!-- Define assets -->
+    <!-- assets -->
     <a-assets>
       <img id="moon" src="full-moon-png-6.png">
       <img id="earth" src="The_Blue_Marble_(remastered).jpg.webp">
       <img id="mars" src="mars-the-astrobiologist-guide-life-the-solar-system-and-14.png">
       <img id="venus" src="venus.avif">
-      <!-- Assuming you have a sky image to use -->
+      <img id="mercury" src="mercury.webp">
+      <img id="sun" src="sun.png">
+
+      <!-- sky image background -->
       <img id="sky-texture" src="5ecb4af475227d9c9ec6a51333c54aac.jpg">
-    </a-assets>
-
-    <!-- Displaying a sphere with the star texture -->
-    <a-sphere src="#moon" radius=".5" position=".50 3 -.5" rotation="0 -45 -35"></a-sphere>
-    <a-sphere src="#earth" radius="1" position="-1 2 2" rotation="0 -50 -25"></a-sphere>
-    <a-sphere src="#mars" radius="1" position="3 2 2" rotation="0 -50 -25"></a-sphere>
-    <a-sphere src="#venus" radius="-1" position="1 2 -2" rotation="0 -40 -.25"></a-sphere>
-
-
-    <!-- <a-box position="-1 0.6 -.5" rotation="0 45 0" color="#4CC3D9"></a-box>-->
-
+    </a-assets> <!-- all the planets, and their positions/rotations/size-->
+    <a-sphere src="#sun" radius="1.75" position="-6 1 1" rotation="0 -50 -30"></a-sphere>
+<a-sphere src="#mercury" radius="1.5" position="-4 1 1" rotation="0 -10 0"></a-sphere>
+<a-sphere src="#venus" radius="0.9" position="-2 1 1" rotation="0 -100 0"></a-sphere>
+<a-sphere src="#earth" radius="1.5" position="0 1 1" rotation="0 -50 0"></a-sphere>
+<a-sphere src="#moon" radius="0.5" position="1 1 1.25" rotation="0 -45 0"></a-sphere>
+<a-sphere src="#mars" radius="1.25" position="3 1 1" rotation="0 -50 0"></a-sphere>
     <!-- Set background image for the sky -->
     <a-sky src="#sky-texture"></a-sky>
-    <!-- <a-plane position="0 0 -0.5" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
 
     <!-- Lighting -->
     <a-light type="ambient" color="#ffffff"></a-light>
     <a-light type="directional" color="#ffffff" position="-1 2 1"></a-light>
-
     <!-- Camera setup -->
     <a-camera position="0 1.6 5"></a-camera>
   </a-scene>
